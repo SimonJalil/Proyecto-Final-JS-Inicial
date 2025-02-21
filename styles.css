@@ -20,11 +20,10 @@
 }
 
 .todo {
-  width: 80%;
-  max-width: 800px;
+  width: 90%; /* Ajusta el ancho para dispositivos móviles */
   background-color: #fff; /* Blanco */
   margin: 20px auto;
-  padding: 40px;
+  padding: 20px; /* Reduce el padding para dispositivos móviles */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -33,18 +32,18 @@
   color: #333;
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* Reduce el margen para dispositivos móviles */
 }
 
 .todo h2 img {
-  width: 30px;
+  width: 20px; /* Reduce el tamaño de la imagen para dispositivos móviles */
   margin-left: 10px;
 }
 
 .row {
   display: flex;
+  flex-direction: column; /* Cambia la dirección del flex para dispositivos móviles */
   align-items: center;
-  justify-content: space-between;
   background-color: #f7f7f7; /* Gris claro */
   border-radius: 10px;
   padding: 20px;
@@ -52,7 +51,7 @@
 }
 
 input {
-  flex: 1;
+  width: 100%; /* Ajusta el ancho del input para dispositivos móviles */
   border: none;
   outline: none;
   background-color: transparent;
@@ -61,9 +60,10 @@ input {
 }
 
 button {
+  width: 100%; /* Ajusta el ancho del botón para dispositivos móviles */
   border: none;
   outline: none;
-  padding: 16px 50px;
+  padding: 16px;
   background-color: #4CAF50; /* Verde */
   color: #fff;
   font-size: 16px;
@@ -116,4 +116,20 @@ ul li span {
 
 ul li span:hover {
   background-color: #f7f7f7;
+}
+
+/* Agrega media queries para ajustar el diseño para dispositivos móviles */
+@media (max-width: 768px) {
+  .todo {
+    width: 95%;
+  }
+  .row {
+    padding: 10px;
+  }
+  input {
+    padding: 5px;
+  }
+  button {
+    padding: 10px;
+  }
 }
